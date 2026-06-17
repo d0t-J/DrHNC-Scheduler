@@ -32,6 +32,8 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
+conda/
+.conda/
 venv/
 .venv/
 env/
