@@ -1,0 +1,64 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Production
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+.venv/
+env/
+ENV/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Database
+*.sqlite3
+*.db
+
+# Coverage
+coverage/
+coverage.*
+
+# Caches
+.cache/
+.parcel-cache/
+
+# Misc
+*.pem
+*.key
+*.p12
+uploads/
+
+# Frontend frameworks
+.nuxt/
+/.cache/
+
