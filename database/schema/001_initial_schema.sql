@@ -106,8 +106,17 @@ updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
 
 CONSTRAINT patients_identity_check
 CHECK (
-    phone_number IS NOT NULL
-    OR messenger_psid IS NOT NULL
+    (
+        channel = 'whatsapp'
+        AND phone_number IS NOT NULL
+        AND messenger_psid IS NULL
+    )
+    OR
+    (
+        channel = 'messenger'
+        AND messenger_psid IS NOT NULL
+        AND phone_number IS NULL
+    )
 )
 
 
