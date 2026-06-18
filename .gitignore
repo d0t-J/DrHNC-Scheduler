@@ -64,3 +64,6 @@ uploads/
 .nuxt/
 /.cache/
 
+# Misc
+master-plan.md
+project-status.md
