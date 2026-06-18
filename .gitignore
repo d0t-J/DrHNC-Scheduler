@@ -58,12 +58,12 @@ coverage.*
 *.pem
 *.key
 *.p12
+master-plan.md
+project-status.md
 uploads/
+.claude/
+CLAUDE.md
 
 # Frontend frameworks
 .nuxt/
 /.cache/
-
-# Misc
-master-plan.md
-project-status.md
