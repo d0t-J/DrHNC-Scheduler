@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
     { href: "/", label: "Home" },
@@ -11,9 +11,23 @@ const navLinks = [
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handler = () => setScrolled(window.scrollY > 60);
+        handler(); // set initial state on mount
+        window.addEventListener("scroll", handler, { passive: true });
+        return () => window.removeEventListener("scroll", handler);
+    }, []);
 
     return (
-        <header className="sticky top-0 z-50 border-b border-line-soft bg-paper/90 backdrop-blur-sm">
+        <header
+            className={`sticky top-0 z-50 transition-colors duration-300 ${
+                scrolled
+                    ? "bg-paper/90 backdrop-blur-sm border-b border-line-soft"
+                    : "bg-transparent border-b border-transparent"
+            }`}
+        >
             <div className="mx-auto flex max-w-content items-center justify-between px-7 h-[72px]">
                 {/* Brand */}
                 <Link href="/" className="no-underline hover:no-underline">
@@ -61,7 +75,9 @@ export default function Navbar() {
             {/* Mobile nav */}
             {open && (
                 <nav
-                    className="md:hidden flex flex-col gap-4 px-7 pb-5 border-t border-line-soft"
+                    className={`md:hidden flex flex-col gap-4 px-7 pb-5 border-t border-line-soft ${
+                        scrolled ? "bg-paper/90 backdrop-blur-sm" : "bg-paper"
+                    }`}
                     aria-label="Mobile navigation"
                 >
                     {navLinks.map((l) => (

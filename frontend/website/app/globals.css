@@ -76,3 +76,24 @@
     animation-delay: 0.25s;
   }
 }
+
+/* Scroll-triggered section reveals (used by RevealSection component) */
+/* Bidirectional: fades in on enter, fades out on exit */
+.section-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.section-reveal.section-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

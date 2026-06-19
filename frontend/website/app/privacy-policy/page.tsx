@@ -31,8 +31,7 @@ export default function PrivacyPolicyPage() {
             <section className="px-7 pb-20">
                 <div className="mx-auto max-w-[720px] prose-custom">
                     <p className="text-ink-soft">
-                        [Business legal name] (&ldquo;the clinic&rdquo;,
-                        &ldquo;we&rdquo;, &ldquo;us&rdquo;) provides this policy
+                        Our clinic provides this policy
                         to explain how we collect, use, and protect information
                         when you contact us to book a consultation with Dr.
                         Hasan Nasir Cheema.
