@@ -1,0 +1,198 @@
+generator client {
+  provider        = "prisma-client"
+  output          = "../lib/generated/prisma"
+  previewFeatures = ["partialIndexes"]
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model appointments {
+  id               String             @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  patient_id       String             @db.Uuid
+  appointment_date DateTime           @db.Date
+  appointment_time DateTime           @db.Time(6)
+  status           appointment_status @default(NEW)
+  notes            String?
+  reserved_until   DateTime?          @db.Timestamptz(6)
+  confirmed_at     DateTime?          @db.Timestamptz(6)
+  created_at       DateTime           @default(now()) @db.Timestamptz(6)
+  updated_at       DateTime           @default(now()) @db.Timestamptz(6)
+  patients         patients           @relation(fields: [patient_id], references: [id], onUpdate: NoAction)
+  payments         payments[]
+  reminders        reminders[]
+
+  @@unique([appointment_date, appointment_time], map: "idx_appointment_slot", where: raw("(status <> ALL (ARRAY['CANCELLED'::appointment_status, 'CLOSED'::appointment_status]))"))
+  @@index([patient_id], map: "idx_appointments_patient")
+  @@index([status], map: "idx_appointments_status")
+}
+
+model audit_logs {
+  id           String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  entity_type  String
+  entity_id    String   @db.Uuid
+  action       String
+  performed_by String?
+  details      Json?
+  created_at   DateTime @default(now()) @db.Timestamptz(6)
+}
+
+model conversations {
+  id              String              @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  patient_id      String              @db.Uuid
+  status          conversation_status @default(OPEN)
+  priority        priority_level      @default(MEDIUM)
+  current_intent  intent_type?
+  assigned_to     String?
+  last_message_at DateTime?           @db.Timestamptz(6)
+  created_at      DateTime            @default(now()) @db.Timestamptz(6)
+  updated_at      DateTime            @default(now()) @db.Timestamptz(6)
+  patients        patients            @relation(fields: [patient_id], references: [id], onUpdate: NoAction)
+  messages        messages[]
+
+  @@index([patient_id], map: "idx_conversations_patient")
+}
+
+model messages {
+  id                  String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  conversation_id     String            @db.Uuid
+  direction           message_direction
+  channel             channel_type
+  message_type        String
+  platform_message_id String?           @unique(map: "idx_messages_platform_message", where: raw("(platform_message_id IS NOT NULL)"))
+  message_text        String?
+  created_at          DateTime          @default(now()) @db.Timestamptz(6)
+  conversations       conversations     @relation(fields: [conversation_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([conversation_id], map: "idx_messages_conversation")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model patients {
+  id             String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  channel        channel_type
+  phone_number   String?         @unique(map: "idx_patients_phone_unique", where: raw("(phone_number IS NOT NULL)")) @db.VarChar(20)
+  messenger_psid String?         @unique(map: "idx_patients_psid_unique", where: raw("(messenger_psid IS NOT NULL)"))
+  full_name      String?
+  created_at     DateTime        @default(now()) @db.Timestamptz(6)
+  updated_at     DateTime        @default(now()) @db.Timestamptz(6)
+  appointments   appointments[]
+  conversations  conversations[]
+
+  @@index([phone_number], map: "idx_patients_phone")
+  @@index([messenger_psid], map: "idx_patients_psid")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model payments {
+  id                  String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  appointment_id      String         @db.Uuid
+  amount              Decimal        @db.Decimal(10, 2)
+  currency            String         @default("PKR") @db.VarChar(10)
+  status              payment_status @default(PENDING)
+  gopayfast_reference String?
+  payment_link        String?
+  paid_at             DateTime?      @db.Timestamptz(6)
+  created_at          DateTime       @default(now()) @db.Timestamptz(6)
+  updated_at          DateTime       @default(now()) @db.Timestamptz(6)
+  appointments        appointments   @relation(fields: [appointment_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([appointment_id], map: "idx_payments_appointment")
+}
+
+model reminders {
+  id             String             @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  appointment_id String             @db.Uuid
+  reminder_type  reminder_type_enum
+  scheduled_at   DateTime           @db.Timestamptz(6)
+  sent_at        DateTime?          @db.Timestamptz(6)
+  status         reminder_status    @default(PENDING)
+  created_at     DateTime           @default(now()) @db.Timestamptz(6)
+  appointments   appointments       @relation(fields: [appointment_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([appointment_id], map: "idx_reminders_appointment")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model settings {
+  id                      Int      @id
+  consultation_start_time DateTime @db.Time(6)
+  consultation_end_time   DateTime @db.Time(6)
+  slot_duration_minutes   Int
+  daily_patient_limit     Int
+  refund_policy           String?
+  cancellation_policy     String?
+  reschedule_policy       String?
+  created_at              DateTime @default(now()) @db.Timestamptz(6)
+  updated_at              DateTime @default(now()) @db.Timestamptz(6)
+}
+
+enum appointment_status {
+  NEW
+  WAITING_FOR_DETAILS
+  SLOT_PROPOSED
+  RESERVED
+  PAYMENT_PENDING
+  PAYMENT_VERIFICATION_PENDING
+  CONFIRMED
+  RESCHEDULED
+  CANCELLED
+  NO_SHOW
+  CLOSED
+}
+
+enum channel_type {
+  whatsapp
+  messenger
+}
+
+enum conversation_status {
+  OPEN
+  WAITING_FOR_PATIENT
+  ESCALATED
+  CLOSED
+}
+
+enum intent_type {
+  BOOKING
+  RESCHEDULE
+  CANCEL
+  FAQ
+  PAYMENT_PROOF
+  COMPLAINT
+  URGENT_ISSUE
+}
+
+enum message_direction {
+  INBOUND
+  OUTBOUND
+}
+
+enum payment_status {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+}
+
+enum priority_level {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum reminder_status {
+  PENDING
+  SENT
+  FAILED
+}
+
+enum reminder_type_enum {
+  HOUR_24                   @map("24_HOUR")
+  HOUR_2                    @map("2_HOUR")
+  CONFIRMATION
+  RESCHEDULE_CONFIRMATION
+  CANCELLATION_CONFIRMATION
+}
