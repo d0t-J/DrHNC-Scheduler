@@ -17,7 +17,7 @@ const steps = [
     },
     {
         title: "We propose a time",
-        body: "We'll check availability within the 11:00–14:00 consultation window and propose a slot.",
+        body: "We'll check availability and propose a slot within consultation hours.",
     },
     {
         title: "Secure it with advance payment",
@@ -249,7 +249,7 @@ export default function HomePage() {
                                 Hours
                             </p>
                             <p className="mt-1.5 text-[1.02rem] text-ink">
-                                [Days open] · 11:00–14:00
+                                [Days open] · 12:00–14:30
                             </p>
                         </div>
                     </div>

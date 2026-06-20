@@ -17,7 +17,7 @@ const steps = [
     },
     {
         title: "Receive a slot proposal",
-        body: "We check availability in the 11:00–14:00 window and propose a time that works.",
+        body: "We check availability and propose a time that works.",
     },
     {
         title: "Pay in advance",

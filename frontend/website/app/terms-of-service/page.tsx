@@ -19,11 +19,7 @@ export default function TermsOfServicePage() {
                         Terms of Service
                     </h1>
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
-                        Last updated: [date]
-                    </p>
-                    <p className="mt-1 text-[0.85rem] text-honey-deep font-mono">
-                        DRAFT — review and finalize wording with Dr. Hasan Nasir
-                        Cheema before publishing.
+                        Last updated: 20 June 2026
                     </p>
                 </div>
             </section>
@@ -41,10 +37,10 @@ export default function TermsOfServicePage() {
                     </h2>
                     <p className="mt-3 text-ink-soft">
                         This system lets you message us on WhatsApp or Facebook
-                        Messenger to book, reschedule, or cancel a consultation
-                        with Dr. Hasan Nasir Cheema. It is a booking and
-                        communication tool only. It does not provide medical
-                        diagnoses, treatment recommendations, or emergency care.
+                        Messenger to book a consultation with Dr. Hasan Nasir
+                        Cheema. It is a booking and communication tool only. It
+                        does not provide medical diagnoses, treatment
+                        recommendations, or emergency care.
                     </p>
                     <p className="mt-3 text-ink-soft font-medium">
                         If you are experiencing a medical emergency, do not use
@@ -53,13 +49,21 @@ export default function TermsOfServicePage() {
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        Booking and payment
+                        Consultation hours and appointment structure
                     </h2>
                     <ul className="mt-3 space-y-2 pl-5 list-disc text-ink-soft">
                         <li>
-                            Appointments are offered within the clinic&apos;s
-                            consultation hours and are subject to availability
+                            Consultations are available 7 days a week,
+                            12:00&nbsp;PM to 2:30&nbsp;PM
                         </li>
+                        <li>Each appointment slot is 10 minutes</li>
+                        <li>Slots are subject to availability</li>
+                    </ul>
+
+                    <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
+                        Booking and payment
+                    </h2>
+                    <ul className="mt-3 space-y-2 pl-5 list-disc text-ink-soft">
                         <li>
                             An appointment is only confirmed once payment has
                             been made in full and in advance
@@ -72,15 +76,26 @@ export default function TermsOfServicePage() {
                     </ul>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        Cancellations, rescheduling, and refunds
+                        Booking finality — no refunds, no rescheduling, no
+                        cancellations
                     </h2>
+                    <p className="mt-3 text-ink-soft font-medium text-ink">
+                        Once your appointment is confirmed and payment is
+                        received, the booking is final. There are no refunds,
+                        no rescheduling, and no cancellations, for any reason.
+                    </p>
                     <p className="mt-3 text-ink-soft">
-                        These are covered in our{" "}
+                        You will be asked to explicitly acknowledge this before
+                        completing payment. By proceeding to payment you confirm
+                        that you have read and accepted this condition.
+                    </p>
+                    <p className="mt-3 text-ink-soft">
+                        Full details are in our{" "}
                         <Link
                             href="/refund-cancellation-policy"
                             className="text-sage-deep hover:underline"
                         >
-                            Refund &amp; Cancellation Policy
+                            Booking Policy
                         </Link>
                         , which forms part of these terms.
                     </p>

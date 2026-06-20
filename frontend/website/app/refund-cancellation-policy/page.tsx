@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Refund & Cancellation Policy",
+    title: "Booking Policy",
     description:
-        "Rescheduling, cancellation, and refund terms for appointments with Dr. Hasan Nasir Cheema.",
+        "Booking finality policy for appointments with Dr. Hasan Nasir Cheema. All confirmed appointments are final.",
 };
 
 export default function RefundCancellationPolicyPage() {
@@ -16,105 +16,86 @@ export default function RefundCancellationPolicyPage() {
                         Legal
                     </span>
                     <h1 className="text-[clamp(1.8rem,4vw,2.6rem)] font-semibold">
-                        Refund &amp; Cancellation Policy
+                        Booking Policy
                     </h1>
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
-                        Last updated: [date]
-                    </p>
-                    <p className="mt-1 text-[0.85rem] text-honey-deep font-mono">
-                        DRAFT — specific hours and amounts not yet confirmed by
-                        Dr. Hasan Nasir Cheema. Review before publishing.
+                        Last updated: 20 June 2026
                     </p>
                 </div>
             </section>
 
             <section className="px-7 pb-20">
                 <div className="mx-auto max-w-[720px]">
-                    <p className="text-ink-soft">
-                        Because appointments are confirmed with full advance
-                        payment, this policy explains what happens if you need
-                        to reschedule or cancel, and how refunds are handled.
+                    <div className="rounded-xl border border-ink/20 bg-ink text-paper px-6 py-5 mb-10">
+                        <p className="font-semibold text-[1.05rem]">
+                            All confirmed bookings are final.
+                        </p>
+                        <p className="mt-1 text-paper/80 text-[0.95rem]">
+                            Once your appointment is confirmed and payment is
+                            received, there are no refunds, no rescheduling, and
+                            no cancellations.
+                        </p>
+                    </div>
+
+                    <h2 className="text-[1.3rem] font-display font-semibold text-ink">
+                        No refunds
+                    </h2>
+                    <p className="mt-3 text-ink-soft">
+                        Advance payments are non-refundable in all circumstances
+                        once an appointment is confirmed. This applies regardless
+                        of the reason for non-attendance, including illness,
+                        scheduling conflicts, or personal emergencies.
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        Rescheduling
-                    </h2>
-                    <ul className="mt-3 space-y-2 pl-5 list-disc text-ink-soft">
-                        <li>
-                            You may reschedule free of charge if you let us know
-                            at least 24 hours before your appointment time, via
-                            WhatsApp or Messenger
-                        </li>
-                        <li>
-                            One complimentary reschedule is included per
-                            booking; further reschedules for the same booking
-                            are at the clinic&apos;s discretion
-                        </li>
-                    </ul>
-
-                    <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        Cancelling your appointment
-                    </h2>
-                    <ul className="mt-3 space-y-2 pl-5 list-disc text-ink-soft">
-                        <li>
-                            <strong className="text-ink">
-                                24 hours or more before your appointment:
-                            </strong>{" "}
-                            full refund of your advance payment
-                        </li>
-                        <li>
-                            <strong className="text-ink">
-                                Less than 24 hours before your appointment:
-                            </strong>{" "}
-                            <span className="rounded bg-mist px-1.5 py-0.5 font-mono text-[0.85em] text-sage-deep">
-                                [placeholder — e.g., &ldquo;50% of the advance
-                                payment is refunded&rdquo; or &ldquo;no
-                                refund&rdquo;]
-                            </span>
-                        </li>
-                        <li>
-                            <strong className="text-ink">No-shows</strong> (not
-                            attending without cancelling) forfeit the full
-                            advance payment
-                        </li>
-                    </ul>
-
-                    <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        If the clinic needs to cancel
+                        No rescheduling
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        If Dr. Hasan Nasir Cheema is unavailable and your
-                        appointment must be cancelled by the clinic, you will be
-                        offered a full refund or a free rebooking at the next
-                        available slot — your choice.
+                        Confirmed appointment slots cannot be moved or
+                        transferred to another date or time. If you are unable
+                        to attend, your slot is forfeited.
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        How refunds are processed
+                        No cancellations
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        Refunds are issued to your original payment method
-                        through GoPayFast. Processing follows GoPayFast&apos;s
-                        standard settlement cycle, which typically takes a few
-                        business days; we&apos;ll let you know once a refund has
-                        been initiated.
+                        Confirmed appointments cannot be cancelled by the
+                        patient. A confirmation message is your binding
+                        commitment to attend.
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        How to request a reschedule, cancellation, or refund
+                        Why this policy exists
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        Message us on WhatsApp or Messenger with your name and
-                        appointment date, and we&apos;ll handle the rest.
+                        Consultation slots are limited and allocated on a
+                        first-come, first-served basis. A late cancellation or
+                        no-show cannot be filled on short notice, which directly
+                        affects other patients waiting for care. This policy
+                        exists to protect the integrity of the scheduling system
+                        and ensure fair access for all patients.
+                    </p>
+                    <p className="mt-3 text-ink-soft">
+                        We encourage you to book only when you are certain you
+                        can attend at the proposed time.
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        Changes to this policy
+                        If the clinic cancels
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        We may update this policy from time to time. The
-                        &ldquo;Last updated&rdquo; date above will reflect the
-                        most recent revision.
+                        In the rare event that Dr. Hasan Nasir Cheema is
+                        unavailable and must cancel an appointment, you will be
+                        offered a free rebooking at the next available slot.
+                    </p>
+
+                    <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
+                        Questions
+                    </h2>
+                    <p className="mt-3 text-ink-soft">
+                        Message us on WhatsApp or Messenger if you have
+                        questions before booking.
                     </p>
 
                     <div className="mt-10 pt-8 border-t border-line-soft">
