@@ -120,12 +120,17 @@ export default function HomePage() {
                                         <p>
                                             Dr. Hasan Nasir Cheema is a General
                                             Practitioner with over 15 years of
-                                            clinical experience. His approach goes
-                                            beyond treating symptoms — he works
-                                            with patients to build lasting habits
-                                            around nutrition, movement, and
-                                            lifestyle that prevent disease and
-                                            support long-term wellbeing.
+                                            clinical experience. An MBBS graduate
+                                            and Assistant Professor at Allied
+                                            Hospital Faisalabad, he has also
+                                            contributed to medical research
+                                            published in the BMJ (England). His
+                                            approach goes beyond treating symptoms
+                                            — he works with patients to build
+                                            lasting habits around nutrition,
+                                            movement, and lifestyle that prevent
+                                            disease and support long-term
+                                            wellbeing.
                                         </p>
                                         <p>
                                             A committed fitness enthusiast
@@ -222,16 +227,20 @@ export default function HomePage() {
                                 Address
                             </p>
                             <p className="mt-1.5 text-[1.02rem] text-ink">
-                                [Clinic Address]
+                                Street 4, Chak 199, Gattwala,<br />
+                                East Canal Road, Faisalabad
                             </p>
                         </div>
                         <div className="rounded-xl border border-line-soft bg-paper-raised p-5">
                             <p className="font-mono text-[0.75rem] tracking-[0.08em] uppercase text-ink-soft">
                                 Phone
                             </p>
-                            <p className="mt-1.5 text-[1.02rem] text-ink">
-                                [Clinic Phone Number]
-                            </p>
+                            <a
+                                href="tel:+923316507678"
+                                className="mt-1.5 block text-[1.02rem] text-sage-deep hover:underline"
+                            >
+                                +92 331 650 7678
+                            </a>
                         </div>
                         <div className="rounded-xl border border-line-soft bg-paper-raised p-5">
                             <p className="font-mono text-[0.75rem] tracking-[0.08em] uppercase text-ink-soft">
@@ -249,21 +258,22 @@ export default function HomePage() {
                                 Hours
                             </p>
                             <p className="mt-1.5 text-[1.02rem] text-ink">
-                                [Days open] · 12:00–14:30
+                                Daily · 12:00–14:30
                             </p>
                         </div>
                     </div>
 
-                    {/* Map placeholder — replace with iframe once address confirmed */}
-                    {/* Pattern: <iframe src="https://www.google.com/maps?q=ADDRESS&output=embed" /> */}
-                    {/* Directions: https://www.google.com/maps/search/?api=1&query=ADDRESS */}
-                    <div className="mt-7 rounded-xl border border-dashed border-line bg-mist/30 px-8 py-10 text-center">
-                        <p className="font-mono text-[0.78rem] uppercase tracking-[0.1em] text-ink-soft">
-                            Map — clinic address pending confirmation
-                        </p>
-                        <p className="mt-1 text-[0.82rem] text-ink-soft/60">
-                            Get directions link will appear here
-                        </p>
+                    <div className="mt-7 rounded-xl overflow-hidden border border-line-soft">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.8272059622655!2d73.18560520034163!3d31.459656544815726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39226f38bb013b57%3A0x87488e41a6ef259f!2sDr.%20Hasan%20Nasir%20Cheema%20Clinic!5e0!3m2!1sen!2s!4v1781973860487!5m2!1sen!2s"
+                            width="100%"
+                            height="360"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Dr. Hasan Nasir Cheema Clinic location"
+                        />
                     </div>
 
                     {/* Social links */}

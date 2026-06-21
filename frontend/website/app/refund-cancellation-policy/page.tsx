@@ -21,6 +21,11 @@ export default function RefundCancellationPolicyPage() {
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
                         Last updated: 20 June 2026
                     </p>
+                    <p className="mt-1 text-[0.85rem] text-ink-soft">
+                        This policy applies to patient-initiated requests.
+                        Clinic-initiated cancellations are handled differently —
+                        see below.
+                    </p>
                 </div>
             </section>
 
@@ -82,20 +87,27 @@ export default function RefundCancellationPolicyPage() {
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        If the clinic cancels
+                        If Dr. Hasan Nasir cancels
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        In the rare event that Dr. Hasan Nasir Cheema is
-                        unavailable and must cancel an appointment, you will be
-                        offered a free rebooking at the next available slot.
+                        The above rules apply to patient-initiated requests
+                        only. In the rare event that Dr. Hasan Nasir must
+                        cancel a confirmed appointment, you will receive a full
+                        refund of your advance payment.
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
                         Questions
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        Message us on WhatsApp or Messenger if you have
-                        questions before booking.
+                        Questions before booking can be sent to{" "}
+                        <a
+                            href="mailto:drhasannasir12@gmail.com"
+                            className="text-sage-deep hover:underline"
+                        >
+                            drhasannasir12@gmail.com
+                        </a>
+                        .
                     </p>
 
                     <div className="mt-10 pt-8 border-t border-line-soft">

@@ -115,6 +115,16 @@ export default function BookingPage() {
                             Message us on Messenger
                         </a>
                     </div>
+
+                    <div className="mt-10 inline-flex items-center gap-3 rounded-xl border border-sage-deep/30 bg-sage-deep/5 px-5 py-4">
+                        <span className="inline-block rounded-full bg-sage-deep/15 px-2.5 py-0.5 font-mono text-[0.7rem] tracking-[0.1em] uppercase text-sage-deep">
+                            Coming soon
+                        </span>
+                        <p className="text-[0.95rem] text-ink-soft">
+                            Online booking will be available directly on this
+                            page.
+                        </p>
+                    </div>
                 </div>
             </section>
         </>

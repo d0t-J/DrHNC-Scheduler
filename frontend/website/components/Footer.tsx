@@ -23,8 +23,8 @@ export default function Footer() {
                     {/* Left: legal identity + social */}
                     <div className="space-y-4">
                         <p className="text-sm text-mist/70 max-w-[38ch]">
-                            [Business legal name] &middot; NTN [number] &middot;
-                            [Registered address]
+                            Dr. Hasan Nasir &middot; Street 4, Chak 199,
+                            Gattwala, East Canal Road, Faisalabad
                         </p>
                         <div className="flex items-center gap-1">
                             <FacebookIcon
@@ -56,7 +56,7 @@ export default function Footer() {
                 </div>
 
                 <p className="mt-7 border-t border-mist/15 pt-4 text-[0.78rem] text-mist/50">
-                    &copy; {year} [Business legal name]. All rights reserved.
+                    &copy; {year} Dr. Hasan Nasir. All rights reserved.
                 </p>
             </div>
         </footer>
