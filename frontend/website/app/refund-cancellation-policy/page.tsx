@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Booking Policy",
+    title: "Refund & Cancellation Policy",
     description:
-        "Booking finality policy for appointments with Dr. Hasan Nasir Cheema. All confirmed appointments are final.",
+        "Refund and cancellation policy for appointments with Dr. Hasan Nasir Cheema. All confirmed appointments are final.",
 };
 
 export default function RefundCancellationPolicyPage() {
@@ -16,7 +16,7 @@ export default function RefundCancellationPolicyPage() {
                         Legal
                     </span>
                     <h1 className="text-[clamp(1.8rem,4vw,2.6rem)] font-semibold">
-                        Booking Policy
+                        Refund &amp; Cancellation Policy
                     </h1>
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
                         Last updated: 20 June 2026

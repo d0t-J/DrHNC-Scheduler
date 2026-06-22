@@ -113,14 +113,6 @@ export default function TermsOfServicePage() {
                         Limitation of liability
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        This website and booking system are administrative tools
-                        for scheduling consultations with Dr. Hasan Nasir. They
-                        do not provide medical advice, diagnosis, or treatment,
-                        and must not be used in a medical emergency — in an
-                        emergency, contact emergency services or go to the
-                        nearest hospital immediately.
-                    </p>
-                    <p className="mt-3 text-ink-soft">
                         To the maximum extent permitted by the laws of Pakistan,
                         Dr. Hasan Nasir is not liable for any indirect,
                         incidental, or consequential loss arising from use of
