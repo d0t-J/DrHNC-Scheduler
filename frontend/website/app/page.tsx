@@ -7,7 +7,7 @@ import { FacebookIcon, YouTubeIcon } from "@/components/SocialIcons";
 export const metadata: Metadata = {
     title: "Dr. Hasan Nasir Cheema — Appointment Booking",
     description:
-        "Book a consultation with Dr. Hasan Nasir Cheema, General Practitioner. Message us on WhatsApp or Messenger to find a time, confirm your slot, and pay in advance.",
+        "Book a consultation with Dr. Hasan Nasir Cheema, Consultant Physician. Message us on WhatsApp or Messenger to find a time, confirm your slot, and pay in advance.",
 };
 
 const steps = [
@@ -33,7 +33,7 @@ const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61582055819875";
 const YOUTUBE_URL = "https://www.youtube.com/@dr.hasannasir9200/";
 
 export default function HomePage() {
-    const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? ""}`;
+    const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "923316507678"}`;
 
     return (
         <>
@@ -91,7 +91,7 @@ export default function HomePage() {
                                 <div className="md:hidden mt-10 relative rounded-2xl overflow-hidden bg-mist aspect-[4/5] max-h-[420px] w-full">
                                     <Image
                                         src="/images/dr-hasan-nasir.jpg"
-                                        alt="Dr. Hasan Nasir Cheema, General Practitioner"
+                                        alt="Dr. Hasan Nasir Cheema, Consultant Physician"
                                         fill
                                         className="object-cover object-top"
                                         sizes="(max-width: 768px) 100vw"
@@ -106,30 +106,38 @@ export default function HomePage() {
                                 id="about"
                                 className="border-t border-line-soft py-18"
                             >
-                                <div className="grid md:grid-cols-[1fr_1.6fr] gap-10 items-start">
+                                <div className="grid md:grid-cols-[200px_1fr] gap-10 items-start">
                                     <div>
                                         <span className="font-mono text-[0.78rem] tracking-[0.12em] uppercase text-sage-deep">
                                             About
                                         </span>
-                                        <h2 className="mt-3 text-[clamp(1.6rem,3vw,2.1rem)] max-w-[22ch]">
-                                            A focused practice, by appointment
-                                            only
+                                        <h2 className="mt-3 text-[clamp(1.4rem,2.6vw,1.8rem)] max-w-[18ch] font-semibold leading-snug">
+                                            Healing through expertise,<br className="hidden md:block" /> one patient at a time
                                         </h2>
                                     </div>
+                                    <div>
+                                    <p className="flex flex-wrap gap-x-3 gap-y-1.5 font-mono text-[0.8rem] font-semibold tracking-[0.1em] uppercase text-sage-deep mb-6">
+                                        <span>MBBS (King Edward)</span>
+                                        <span aria-hidden="true">·</span>
+                                        <span>BMJ England</span>
+                                        <span aria-hidden="true">·</span>
+                                        <span>M.Phil Human Biochem</span>
+                                        <span aria-hidden="true">·</span>
+                                        <span>Food and Nutrition Expert</span>
+                                    </p>
                                     <div className="space-y-4 text-ink-soft text-[1.02rem]">
                                         <p>
-                                            Dr. Hasan Nasir Cheema is a General
-                                            Practitioner with over 15 years of
-                                            clinical experience. An MBBS graduate
-                                            and Assistant Professor at Allied
-                                            Hospital Faisalabad, he has also
-                                            contributed to medical research
-                                            published in the BMJ (England). His
-                                            approach goes beyond treating symptoms
-                                            — he works with patients to build
-                                            lasting habits around nutrition,
-                                            movement, and lifestyle that prevent
-                                            disease and support long-term
+                                            Dr. Hasan Nasir Cheema is a Consultant
+                                            Physician with over 15 years of
+                                            clinical experience. An Assistant
+                                            Professor at Allied Hospital
+                                            Faisalabad, he brings both academic
+                                            rigour and practical depth to every
+                                            consultation. His approach goes beyond
+                                            treating symptoms — he works with
+                                            patients to build lasting habits around
+                                            nutrition, movement, and lifestyle that
+                                            prevent disease and support long-term
                                             wellbeing.
                                         </p>
                                         <p>
@@ -149,6 +157,7 @@ export default function HomePage() {
                                             before you arrive.
                                         </p>
                                     </div>
+                                    </div>
                                 </div>
                             </RevealSection>
                         </div>
@@ -159,7 +168,7 @@ export default function HomePage() {
                                 <div className="relative rounded-2xl overflow-hidden bg-mist aspect-[3/4] max-h-[540px]">
                                     <Image
                                         src="/images/dr-hasan-nasir.jpg"
-                                        alt="Dr. Hasan Nasir Cheema, General Practitioner"
+                                        alt="Dr. Hasan Nasir Cheema, Consultant Physician"
                                         fill
                                         className="object-cover object-top"
                                         priority
@@ -236,7 +245,8 @@ export default function HomePage() {
                                 Phone
                             </p>
                             <a
-                                href="tel:+923316507678"
+                                href={waLink}
+                                target="_blank"
                                 className="mt-1.5 block text-[1.02rem] text-sage-deep hover:underline"
                             >
                                 +92 331 650 7678

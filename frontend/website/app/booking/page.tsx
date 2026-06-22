@@ -30,8 +30,8 @@ const steps = [
 ];
 
 export default function BookingPage() {
-    const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? ""}`;
-    const messengerLink = `https://m.me/${process.env.NEXT_PUBLIC_PAGE_ID ?? ""}`;
+    const waLink = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "923316507678"}`;
+    const messengerLink = `https://m.me/${process.env.NEXT_PUBLIC_PAGE_ID ?? "61582055819875"}`;
 
     return (
         <>
@@ -49,6 +49,14 @@ export default function BookingPage() {
                         Facebook Messenger. The process takes a few minutes and
                         your slot is secured once payment is complete.
                     </p>
+                    <div className="mt-6 mb-1 inline-flex items-center gap-4 rounded-xl border border-yellow-400 bg-yellow-100 px-5 py-3">
+                        <span className="inline-block rounded-full bg-yellow-400 px-3 py-1 font-mono text-[0.9rem] tracking-[0.1em] uppercase text-sage-deep">
+                            Coming soon
+                        </span>
+                        <p className="text-[1rem] text-ink-soft">
+                            Online booking will be available directly on this page.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -116,15 +124,6 @@ export default function BookingPage() {
                         </a>
                     </div>
 
-                    <div className="mt-10 inline-flex items-center gap-3 rounded-xl border border-sage-deep/30 bg-sage-deep/5 px-5 py-4">
-                        <span className="inline-block rounded-full bg-sage-deep/15 px-2.5 py-0.5 font-mono text-[0.7rem] tracking-[0.1em] uppercase text-sage-deep">
-                            Coming soon
-                        </span>
-                        <p className="text-[0.95rem] text-ink-soft">
-                            Online booking will be available directly on this
-                            page.
-                        </p>
-                    </div>
                 </div>
             </section>
         </>

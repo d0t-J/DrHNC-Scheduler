@@ -33,8 +33,11 @@ export default function Navbar() {
                 <Link href="/" className="no-underline hover:no-underline">
                     <span className="font-display text-xl font-semibold tracking-wide text-ink leading-tight">
                         Dr. Hasan Nasir Cheema
-                        <small className="block font-body text-[0.7rem] font-medium tracking-[0.08em] uppercase text-ink-soft">
-                            General Physician
+                        <small className="block font-body text-[0.65rem] font-medium tracking-[0.08em] uppercase text-ink-soft">
+                            Consultant Physician
+                        </small>
+                        <small className="block font-body text-[0.6rem] font-normal tracking-[0.06em] text-ink-soft/70 mt-0.5">
+                            MBBS · BMJ · M.Phil · Food &amp; Nutrition
                         </small>
                     </span>
                 </Link>
