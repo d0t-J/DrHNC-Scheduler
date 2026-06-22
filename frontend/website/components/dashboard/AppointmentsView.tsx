@@ -167,7 +167,7 @@ function AppointmentCard({
     role: DashboardRole;
 }) {
     const [expanded, setExpanded] = useState(false);
-    const [feedback, setFeedback] = useState<{ msg: string; queued: boolean } | null>(null);
+    const [feedback, setFeedback] = useState<{ message: string; queued: boolean } | null>(null);
     const [rescheduleDate, setRescheduleDate] = useState("");
     const [rescheduleTime, setRescheduleTime] = useState("");
     const [showReschedule, setShowReschedule] = useState(false);
@@ -388,7 +388,7 @@ function AppointmentCard({
 
                     {feedback && (
                         <ActionFeedback
-                            msg={feedback.msg}
+                            msg={feedback.message}
                             queued={feedback.queued}
                         />
                     )}

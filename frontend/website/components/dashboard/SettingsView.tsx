@@ -22,7 +22,7 @@ function timeToInput(t: string): string {
 }
 
 export default function SettingsView() {
-    const [settings, setSettings] = useState<Settings | null>(null);
+    const [_settings, setSettings] = useState<Settings | null>(null);
     const [form, setForm] = useState<Partial<Settings>>({});
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
