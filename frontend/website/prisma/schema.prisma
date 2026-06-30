@@ -74,6 +74,8 @@ model patients {
   phone_number   String?         @unique(map: "idx_patients_phone_unique", where: raw("(phone_number IS NOT NULL)")) @db.VarChar(20)
   messenger_psid String?         @unique(map: "idx_patients_psid_unique", where: raw("(messenger_psid IS NOT NULL)"))
   full_name      String?
+  date_of_birth  DateTime?       @db.Date
+  gender         String?
   created_at     DateTime        @default(now()) @db.Timestamptz(6)
   updated_at     DateTime        @default(now()) @db.Timestamptz(6)
   appointments   appointments[]
