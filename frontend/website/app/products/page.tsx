@@ -17,7 +17,7 @@ export default function ProductsPage() {
                     Products coming soon
                 </h1>
                 <p className="mt-5 max-w-[46ch] text-[1.1rem] text-ink-soft">
-                    Dr. Hasan Nasir's health and wellness products — available soon.
+                    Dr. Hasan Nasir`&apos`s health and wellness products — available soon.
                 </p>
                 <div className="mt-6 mb-1 inline-flex items-center gap-4 rounded-xl border border-yellow-400 bg-yellow-100 px-5 py-3">
                     <span className="inline-block rounded-full bg-yellow-400 px-3 py-1 font-mono text-[0.9rem] tracking-[0.1em] uppercase text-sage-deep">
