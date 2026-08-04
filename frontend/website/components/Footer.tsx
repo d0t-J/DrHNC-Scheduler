@@ -3,11 +3,14 @@ import { FacebookIcon, YouTubeIcon } from "@/components/SocialIcons";
 
 const policyLinks = [
     { href: "/privacy-policy", label: "Privacy Policy" },
-    { href: "/terms-of-service", label: "Terms of Service" },
+    { href: "/terms-of-service", label: "Terms & Conditions" },
     {
         href: "/refund-cancellation-policy",
-        label: "Refund & Cancellation Policy",
+        label: "Returns & Refunds",
     },
+    { href: "/shipping-delivery-policy", label: "Shipping & Delivery" },
+    { href: "/health-product-disclaimer", label: "Health Disclaimer" },
+    { href: "/cookie-policy", label: "Cookie Policy" },
 ];
 
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61582055819875";
@@ -40,7 +43,7 @@ export default function Footer() {
 
                     {/* Right: policy links */}
                     <nav
-                        className="flex flex-col gap-3 sm:flex-row sm:gap-5 sm:items-start"
+                        className="flex max-w-[42rem] flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-end sm:gap-x-5 sm:gap-y-3 sm:items-start"
                         aria-label="Policy links"
                     >
                         {policyLinks.map((l) => (

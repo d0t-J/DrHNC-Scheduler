@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Refund & Cancellation Policy",
+    title: "Refund, Return & Cancellation Policy",
     description:
-        "Refund and cancellation policy for appointments with Dr. Hasan Nasir Cheema. All confirmed appointments are final.",
+        "Returns and refunds for products, plus cancellation terms for appointments with Dr. Hasan Nasir.",
 };
 
 export default function RefundCancellationPolicyPage() {
@@ -16,97 +16,182 @@ export default function RefundCancellationPolicyPage() {
                         Legal
                     </span>
                     <h1 className="text-[clamp(1.8rem,4vw,2.6rem)] font-semibold">
-                        Refund &amp; Cancellation Policy
+                        Refund, Return &amp; Cancellation Policy
                     </h1>
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
-                        Last updated: 20 June 2026
-                    </p>
-                    <p className="mt-1 text-[0.85rem] text-ink-soft">
-                        This policy applies to patient-initiated requests.
-                        Clinic-initiated cancellations are handled differently —
-                        see below.
+                        Last updated: 4 August 2026
                     </p>
                 </div>
             </section>
 
             <section className="px-7 pb-20">
                 <div className="mx-auto max-w-[720px]">
-                    <div className="rounded-xl border border-ink/20 bg-ink text-paper px-6 py-5 mb-10">
-                        <p className="font-semibold text-[1.05rem]">
-                            All confirmed bookings are final.
+                    <p className="text-ink-soft">
+                        This policy separates physical product orders from
+                        appointment bookings. Different rules apply to each.
+                        Nothing in this policy limits a right or remedy that
+                        cannot be excluded under applicable consumer law.
+                    </p>
+
+                    <div className="rounded-xl border border-sage/30 bg-sage/10 px-6 py-5 mt-8 mb-10">
+                        <p className="font-semibold text-[1.05rem] text-ink">
+                            Product problem? Contact us within 7 calendar days
+                            of delivery.
                         </p>
-                        <p className="mt-1 text-paper/80 text-[0.95rem]">
-                            Once your appointment is confirmed and payment is
-                            received, there are no refunds, no rescheduling, and
-                            no cancellations.
+                        <p className="mt-1 text-ink-soft text-[0.95rem]">
+                            Keep the product, packaging, invoice, and clear
+                            photographs while we review the request. Do not use
+                            a product that appears damaged, tampered with, or
+                            expired.
                         </p>
                     </div>
 
                     <h2 className="text-[1.3rem] font-display font-semibold text-ink">
-                        No refunds
+                        Eligible product problems
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        Advance payments are non-refundable in all circumstances
-                        once an appointment is confirmed. This applies regardless
-                        of the reason for non-attendance, including illness,
-                        scheduling conflicts, or personal emergencies.
+                        A replacement or refund may be available when a product
+                        is:
+                    </p>
+                    <ul className="mt-3 space-y-2 pl-5 list-disc text-ink-soft">
+                        <li>Different from the product or quantity ordered</li>
+                        <li>Materially damaged or leaking when delivered</li>
+                        <li>Unsealed or visibly tampered with on arrival</li>
+                        <li>Expired when delivered</li>
+                        <li>
+                            Materially defective or not as described on the
+                            product page
+                        </li>
+                    </ul>
+
+                    <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
+                        Products that cannot be returned
+                    </h2>
+                    <p className="mt-3 text-ink-soft">
+                        Because the shop sells food, wellness, and consumable
+                        products, we cannot accept change-of-mind returns. We
+                        also cannot accept a return after a container or seal has
+                        been opened, the product has been used, or storage and
+                        handling after delivery cannot be verified, unless the
+                        product was defective, unsafe, expired, or otherwise not
+                        compliant when supplied.
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        No rescheduling
+                        How to request help
+                    </h2>
+                    <ol className="mt-3 space-y-2 pl-5 list-decimal text-ink-soft">
+                        <li>
+                            Email{" "}
+                            <a
+                                href="mailto:drhasannasir12@gmail.com"
+                                className="text-sage-deep hover:underline"
+                            >
+                                drhasannasir12@gmail.com
+                            </a>{" "}
+                            or call +92 331 6507678 within 7 calendar days of
+                            delivery.
+                        </li>
+                        <li>
+                            Provide the order number, product name, delivery
+                            date, and a clear description of the issue.
+                        </li>
+                        <li>
+                            Attach clear photographs or video showing the product,
+                            batch and expiry information, seal, outer packaging,
+                            and courier label where relevant.
+                        </li>
+                        <li>
+                            Wait for return or disposal instructions. Do not send
+                            a product back without authorization.
+                        </li>
+                    </ol>
+
+                    <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
+                        Review and resolution
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        Confirmed appointment slots cannot be moved or
-                        transferred to another date or time. If you are unable
-                        to attend, your slot is forfeited.
+                        We may ask for additional information or arrange a return
+                        before approving a claim. If the claim is accepted, we
+                        will offer an appropriate replacement or refund. If a
+                        replacement is unavailable, the affected product price
+                        and any basic delivery charge paid specifically for that
+                        product will be refunded. Approved refunds are sent to
+                        the original payment method where possible, normally
+                        within 7 to 14 business days; your bank or payment
+                        provider may take additional time to post the amount.
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        No cancellations
+                        Incorrect address, refusal, and failed delivery
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        Confirmed appointments cannot be cancelled by the
-                        patient. A confirmation message is your binding
-                        commitment to attend.
+                        If delivery fails because the address or contact details
+                        supplied were incorrect, the recipient was unavailable,
+                        or a correctly supplied order was refused, additional
+                        delivery or return charges may be deducted from a refund
+                        or charged before re-dispatch. This does not apply where
+                        the failure was our error or the courier&apos;s confirmed
+                        mishandling.
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        Why this policy exists
+                        Order cancellation
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        Consultation slots are limited and allocated on a
-                        first-come, first-served basis. A late cancellation or
-                        no-show cannot be filled on short notice, which directly
-                        affects other patients waiting for care. This policy
-                        exists to protect the integrity of the scheduling system
-                        and ensure fair access for all patients.
-                    </p>
-                    <p className="mt-3 text-ink-soft">
-                        We encourage you to book only when you are certain you
-                        can attend at the proposed time.
+                        Contact us immediately if you need to cancel a physical
+                        product order. We will try to stop fulfilment, but an
+                        order cannot be cancelled after dispatch. If we cancel a
+                        paid product order because an item is unavailable, an
+                        address cannot be served, or a listing error occurred,
+                        the cancelled amount will be refunded.
                     </p>
 
-                    <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
-                        If Dr. Hasan Nasir cancels
+                    <div className="rounded-xl border border-ink/20 bg-ink text-paper px-6 py-5 mt-14 mb-10">
+                        <p className="font-semibold text-[1.05rem]">
+                            Confirmed appointments are final.
+                        </p>
+                        <p className="mt-1 text-paper/80 text-[0.95rem]">
+                            Once an appointment is confirmed and payment is
+                            received, patient-initiated cancellation,
+                            rescheduling, and refunds are not available.
+                        </p>
+                    </div>
+
+                    <h2 className="text-[1.3rem] font-display font-semibold text-ink">
+                        Appointment cancellations and refunds
                     </h2>
-                    <p className="mt-3 text-ink-soft">
-                        The above rules apply to patient-initiated requests
-                        only. In the rare event that Dr. Hasan Nasir must
-                        cancel a confirmed appointment, you will receive a full
-                        refund of your advance payment.
-                    </p>
+                    <ul className="mt-3 space-y-2 pl-5 list-disc text-ink-soft">
+                        <li>
+                            Advance payments are non-refundable once an
+                            appointment is confirmed, including in cases of
+                            illness, a scheduling conflict, personal emergency,
+                            late arrival, or non-attendance.
+                        </li>
+                        <li>
+                            A confirmed appointment cannot be moved, transferred,
+                            or rescheduled by the patient.
+                        </li>
+                        <li>
+                            If Dr. Hasan Nasir cancels a confirmed appointment,
+                            the advance payment will be refunded in full.
+                        </li>
+                    </ul>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
                         Questions
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        Questions before booking can be sent to{" "}
-                        <a
-                            href="mailto:drhasannasir12@gmail.com"
+                        Please contact us before ordering if you need help
+                        understanding product suitability, delivery, or this
+                        policy. Product information does not replace advice from
+                        a qualified healthcare professional; see the{" "}
+                        <Link
+                            href="/health-product-disclaimer"
                             className="text-sage-deep hover:underline"
                         >
-                            drhasannasir12@gmail.com
-                        </a>
+                            Health Product Disclaimer
+                        </Link>
                         .
                     </p>
 
@@ -115,7 +200,7 @@ export default function RefundCancellationPolicyPage() {
                             href="/"
                             className="text-sage-deep text-sm hover:underline"
                         >
-                            ← Back to home
+                            &larr; Back to home
                         </Link>
                     </div>
                 </div>
