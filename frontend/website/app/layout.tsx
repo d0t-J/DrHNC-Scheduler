@@ -27,11 +27,11 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
     title: {
-        default: "Dr. Hasan Nasir Cheema — Appointment Booking",
+        default: "Dr. Hasan Nasir Cheema",
         template: "%s | Dr. Hasan Nasir Cheema",
     },
     description:
-        "Book a consultation with Dr. Hasan Nasir Cheema. Message us on WhatsApp or Messenger to schedule, confirm, and pay for your appointment.",
+        "Book an in-person consultation with Dr. Hasan Nasir Cheema online, or browse health and wellness products from Shop Dr Hasan Nasir.",
 };
 
 export default function RootLayout({

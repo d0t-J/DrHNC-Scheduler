@@ -5,27 +5,27 @@ import RevealSection from "@/components/RevealSection";
 import { FacebookIcon, YouTubeIcon } from "@/components/SocialIcons";
 
 export const metadata: Metadata = {
-    title: "Dr. Hasan Nasir Cheema — Appointment Booking",
+    title: "Dr. Hasan Nasir Cheema",
     description:
-        "Book a consultation with Dr. Hasan Nasir Cheema, Consultant Physician. Message us on WhatsApp or Messenger to find a time, confirm your slot, and pay in advance.",
+        "Book an in-person consultation with Dr. Hasan Nasir Cheema online, or browse health and wellness products from Shop Dr Hasan Nasir.",
 };
 
 const steps = [
     {
-        title: "Send a message",
-        body: "Message the clinic on WhatsApp or Messenger and let us know you'd like to book a consultation.",
+        title: "Choose an appointment",
+        body: "Open the online booking page and choose an available date and time.",
     },
     {
-        title: "We propose a time",
-        body: "We'll check availability and propose a slot within consultation hours.",
+        title: "Share your details",
+        body: "Enter your contact details and the information requested for your appointment.",
     },
     {
-        title: "Secure it with advance payment",
-        body: "Appointments are confirmed once payment is made in full and in advance, processed securely through GoPayFast.",
+        title: "Confirm with advance payment",
+        body: "Complete full advance payment securely online to reserve your consultation.",
     },
     {
-        title: "Get your confirmation",
-        body: "You'll receive a confirmation message, plus a reminder ahead of your appointment time.",
+        title: "Receive your confirmation",
+        body: "You'll receive a booking confirmation with your appointment details.",
     },
 ];
 
@@ -37,25 +37,12 @@ export default function HomePage() {
 
     return (
         <>
-            {/*
-             * ── Hero + About: shared sticky-photo wrapper ──────────────
-             *
-             * Desktop: two-column grid.
-             *   Left  — hero text, then about text stacked vertically.
-             *   Right — photo with position:sticky, top = navbar (72px) + gap (16px).
-             *           Releases when the right column's bottom edge passes top-[88px],
-             *           i.e. exactly when the About section ends.
-             *
-             * Mobile: right column is hidden (hidden md:block). Left column is
-             *         full-width, no sticky applies anywhere.
-             */}
+            {/* ── Hero + About ────────────────────────────────────────── */}
             <div className="px-7 bg-gradient-to-b from-mist/60 via-mist/20 to-paper pb-4">
                 <div className="mx-auto max-w-content">
                     <div className="md:grid md:grid-cols-[1fr_400px] md:gap-12 md:items-start">
-
-                        {/* ── Left column ─────────────────────────────── */}
+                        {/* Hero text */}
                         <div>
-                            {/* Hero text */}
                             <div className="pt-16 pb-14">
                                 <span className="reveal font-mono text-[0.78rem] tracking-[0.12em] uppercase text-sage-deep mb-4 inline-block">
                                     Appointment-based consultations
@@ -65,25 +52,23 @@ export default function HomePage() {
                                     Cheema
                                 </h1>
                                 <p className="reveal reveal-d2 mt-5 max-w-[46ch] text-[1.1rem] text-ink-soft">
-                                    Message us on WhatsApp or Facebook Messenger
-                                    to find a time, confirm your slot, and pay in
-                                    advance to secure your appointment — no
-                                    waiting room, no guesswork.
+                                    Book your consultation online, choose an
+                                    available appointment, and pay in advance to
+                                    secure your time. You can also explore health
+                                    and wellness products in our online shop.
                                 </p>
                                 <div className="reveal reveal-d3 mt-8 flex flex-wrap gap-4">
-                                    <a
-                                        href={waLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 rounded-full bg-honey px-6 py-3.5 text-[0.95rem] font-semibold text-white no-underline transition hover:bg-honey-deep hover:-translate-y-px hover:no-underline"
-                                    >
-                                        Message on WhatsApp
-                                    </a>
                                     <Link
                                         href="/booking"
+                                        className="inline-flex items-center gap-2 rounded-full bg-honey px-6 py-3.5 text-[0.95rem] font-semibold text-white no-underline transition hover:bg-honey-deep hover:-translate-y-px hover:no-underline"
+                                    >
+                                        Book Now
+                                    </Link>
+                                    <Link
+                                        href="/products"
                                         className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3.5 text-[0.95rem] font-semibold text-ink no-underline transition hover:border-ink hover:no-underline"
                                     >
-                                        How booking works
+                                        Visit the Shop
                                     </Link>
                                 </div>
 
@@ -98,71 +83,9 @@ export default function HomePage() {
                                     />
                                 </div>
                             </div>
-
-                            {/* About — scroll-triggered reveal, div not section
-                                (already inside the outer two-column section context) */}
-                            <RevealSection
-                                as="div"
-                                id="about"
-                                className="border-t border-line-soft py-18"
-                            >
-                                <div className="grid md:grid-cols-[200px_1fr] gap-10 items-start">
-                                    <div>
-                                        <span className="font-mono text-[0.78rem] tracking-[0.12em] uppercase text-sage-deep">
-                                            About
-                                        </span>
-                                        <h2 className="mt-3 text-[clamp(1.4rem,2.6vw,1.8rem)] max-w-[18ch] font-semibold leading-snug">
-                                            Healing through expertise,<br className="hidden md:block" /> one patient at a time
-                                        </h2>
-                                    </div>
-                                    <div>
-                                    <p className="flex flex-wrap gap-x-3 gap-y-1.5 font-mono text-[0.8rem] font-semibold tracking-[0.1em] uppercase text-sage-deep mb-6">
-                                        <span>MBBS (King Edward)</span>
-                                        <span aria-hidden="true">·</span>
-                                        <span>BMJ England</span>
-                                        <span aria-hidden="true">·</span>
-                                        <span>M.Phil Human Biochem</span>
-                                        <span aria-hidden="true">·</span>
-                                        <span>Food and Nutrition Expert</span>
-                                    </p>
-                                    <div className="space-y-4 text-ink-soft text-[1.02rem]">
-                                        <p>
-                                            Dr. Hasan Nasir Cheema is a Consultant
-                                            Physician with over 15 years of
-                                            clinical experience. An Assistant
-                                            Professor at Allied Hospital
-                                            Faisalabad, he brings both academic
-                                            rigour and practical depth to every
-                                            consultation. His approach goes beyond
-                                            treating symptoms — he works with
-                                            patients to build lasting habits around
-                                            nutrition, movement, and lifestyle that
-                                            prevent disease and support long-term
-                                            wellbeing.
-                                        </p>
-                                        <p>
-                                            A committed fitness enthusiast
-                                            himself, Dr. Cheema believes that
-                                            practical guidance on diet and
-                                            exercise is as important as any
-                                            prescription. He regularly shares
-                                            evidence-informed health and fitness
-                                            insights to help people make better
-                                            decisions every day.
-                                        </p>
-                                        <p>
-                                            Every appointment is booked in
-                                            advance through WhatsApp or Messenger,
-                                            so your consultation time is reserved
-                                            before you arrive.
-                                        </p>
-                                    </div>
-                                    </div>
-                                </div>
-                            </RevealSection>
                         </div>
 
-                        {/* ── Right column: photo, desktop only ─── */}
+                        {/* Photo, desktop only */}
                         <div className="hidden md:block">
                             <div className="reveal reveal-d2 mt-16">
                                 <div className="relative rounded-2xl overflow-hidden bg-mist aspect-[3/4] max-h-[540px]">
@@ -177,8 +100,82 @@ export default function HomePage() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
+                    {/* Full-width introduction below the hero */}
+                    <RevealSection
+                        as="div"
+                        id="about"
+                        className="border-t border-line-soft py-18"
+                    >
+                        <div className="grid md:grid-cols-[200px_1fr] gap-10 items-start">
+                            <div>
+                                <span className="font-mono text-[0.78rem] tracking-[0.12em] uppercase text-sage-deep">
+                                    About
+                                </span>
+                                <h2 className="mt-3 text-[clamp(1.4rem,2.6vw,1.8rem)] max-w-[18ch] font-semibold leading-snug">
+                                    Healing through expertise,
+                                    <br className="hidden md:block" />{" "}
+                                    one patient at a time
+                                </h2>
+                            </div>
+                            <div>
+                                <p className="flex flex-wrap gap-x-3 gap-y-1.5 font-mono text-[0.8rem] font-semibold tracking-[0.1em] uppercase text-sage-deep mb-6">
+                                    <span>MBBS (King Edward)</span>
+                                    <span aria-hidden="true">·</span>
+                                    <span>BMJ England</span>
+                                    <span aria-hidden="true">·</span>
+                                    <span>M.Phil Human Biochem</span>
+                                    <span aria-hidden="true">·</span>
+                                    <span>Food and Nutrition Expert</span>
+                                </p>
+                                <div className="space-y-4 text-ink-soft text-[1.02rem]">
+                                    <p>
+                                        Dr. Hasan Nasir Cheema is a General
+                                        Physician with over 15 years of clinical
+                                        experience, with a special interest in
+                                        gut and brain health, anxiety, and
+                                        depression management. His approach to
+                                        healthcare goes beyond treating symptoms,
+                                        focusing on identifying underlying factors
+                                        and helping patients develop sustainable
+                                        habits around nutrition, movement, sleep,
+                                        and lifestyle.
+                                    </p>
+                                    <p>
+                                        Dr. Cheema believes that lasting health
+                                        and wellbeing are built through healthy
+                                        nutrition and balanced eating combined
+                                        with regular physical activity and
+                                        fitness. To support this holistic
+                                        approach, he has dedicated nutritional
+                                        and psychological support services
+                                        through a specialized team, enabling
+                                        patients to receive structured guidance
+                                        alongside their medical care.
+                                    </p>
+                                    <p>
+                                        A committed fitness enthusiast himself,
+                                        Dr. Cheema emphasizes practical,
+                                        evidence-informed guidance on healthy
+                                        eating, nutrition, exercise, and physical
+                                        activity as essential components of
+                                        disease prevention and long-term
+                                        wellbeing. Through his clinical practice
+                                        and health education, he aims to help
+                                        people understand their health better,
+                                        make informed decisions, and build
+                                        sustainable habits for a healthier life.
+                                    </p>
+                                    <p>
+                                        Every appointment is booked online in
+                                        advance, ensuring that your consultation
+                                        time is reserved before you arrive.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </RevealSection>
                 </div>
             </div>
 
@@ -192,7 +189,7 @@ export default function HomePage() {
                         How booking works
                     </span>
                     <h2 className="mt-3 text-[clamp(1.6rem,3vw,2.1rem)] max-w-[22ch]">
-                        From message to confirmed appointment
+                        From online booking to confirmed appointment
                     </h2>
                     <ol className="mt-9 list-none p-0 m-0">
                         {steps.map((step, i) => (
@@ -236,7 +233,8 @@ export default function HomePage() {
                                 Address
                             </p>
                             <p className="mt-1.5 text-[1.02rem] text-ink">
-                                Street 4, Chak 199, Gattwala,<br />
+                                Street 4, Chak 199, Gattwala,
+                                <br />
                                 East Canal Road, Faisalabad
                             </p>
                         </div>

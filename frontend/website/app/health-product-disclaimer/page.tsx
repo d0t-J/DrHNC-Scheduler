@@ -55,7 +55,7 @@ export default function HealthProductDisclaimerPage() {
                     </h2>
                     <p className="mt-3 text-ink-soft">
                         Seek professional advice before using a food supplement,
-                        herbal, fibre, algae, or other wellness product if you:
+                        herbal, fiber, algae, or other wellness product if you:
                     </p>
                     <ul className="mt-3 space-y-2 pl-5 list-disc text-ink-soft">
                         <li>
