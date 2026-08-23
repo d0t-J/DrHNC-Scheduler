@@ -70,6 +70,15 @@ export default function HomePage() {
                                     >
                                         Visit the Shop
                                     </Link>
+                                    <a
+                                        href={waLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Message Dr. Hasan Nasir Cheema on WhatsApp"
+                                        className="inline-flex items-center gap-2 rounded-full bg-sage px-6 py-3.5 text-[0.95rem] font-semibold text-white no-underline transition hover:bg-sage-deep hover:-translate-y-px hover:no-underline"
+                                    >
+                                        Message on WhatsApp
+                                    </a>
                                 </div>
 
                                 {/* Mobile photo — below CTAs, portrait, hidden on md+ */}
