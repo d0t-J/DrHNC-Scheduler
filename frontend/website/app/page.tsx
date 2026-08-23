@@ -256,9 +256,8 @@ export default function HomePage() {
                                 Address
                             </p>
                             <p className="mt-1.5 text-[1.02rem] text-ink">
-                                Street 4, Chak 199, Gattwala,
-                                <br />
-                                East Canal Road, Faisalabad
+                                Street 4, Chak 199, Gattwala, East Canal Road,
+                                Faisalabad
                             </p>
                         </div>
                         <div className="rounded-xl border border-line-soft bg-paper-raised p-5">
@@ -289,7 +288,12 @@ export default function HomePage() {
                                 Hours
                             </p>
                             <p className="mt-1.5 text-[1.02rem] text-ink">
-                                Daily · 12:00–14:30
+                                <span className="block">
+                                    Online consultation · 12:00 PM–5:00 PM
+                                </span>
+                                <span className="block">
+                                    Clinic time · 6:00 PM–9:00 PM
+                                </span>
                             </p>
                         </div>
                     </div>

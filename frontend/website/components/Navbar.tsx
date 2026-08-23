@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-    { href: "/", label: "Home" },
     { href: "/booking", label: "Booking" },
     { href: "/products", label: "Products" },
     { href: "/#contact", label: "Contact" },
+    { href: "/legal", label: "Legal" },
 ];
 
 export default function Navbar() {
@@ -57,12 +57,6 @@ export default function Navbar() {
                             {l.label}
                         </Link>
                     ))}
-                    <Link
-                        href="/booking"
-                        className="rounded-full bg-honey px-5 py-2.5 text-[0.88rem] font-semibold text-white no-underline transition-colors hover:bg-honey-deep hover:no-underline"
-                    >
-                        Book now
-                    </Link>
                 </nav>
 
                 {/* Mobile toggle */}
@@ -94,13 +88,6 @@ export default function Navbar() {
                             {l.label}
                         </Link>
                     ))}
-                    <Link
-                        href="/booking"
-                        className="inline-flex w-fit rounded-full bg-honey px-5 py-2.5 text-[0.88rem] font-semibold text-white no-underline hover:bg-honey-deep"
-                        onClick={() => setOpen(false)}
-                    >
-                        Book now
-                    </Link>
                 </nav>
             )}
         </header>
