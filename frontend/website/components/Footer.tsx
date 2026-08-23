@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { FacebookIcon, YouTubeIcon } from "@/components/SocialIcons";
+import {
+    EmailIcon,
+    FacebookIcon,
+    WhatsAppIcon,
+    YouTubeIcon,
+} from "@/components/SocialIcons";
 
 const policyLinks = [
     { href: "/privacy-policy", label: "Privacy Policy" },
@@ -15,6 +20,8 @@ const policyLinks = [
 
 const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61582055819875";
 const YOUTUBE_URL = "https://www.youtube.com/@dr.hasannasir9200/";
+const WHATSAPP_URL = `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "923316507678"}`;
+const EMAIL_ADDRESS = "drhasannasir12@gmail.com";
 
 export default function Footer() {
     const year = new Date().getFullYear();
@@ -32,11 +39,19 @@ export default function Footer() {
                         <div className="flex items-center gap-1">
                             <FacebookIcon
                                 href={FACEBOOK_URL}
-                                className="p-2 rounded-lg text-mist/60 hover:text-mist hover:bg-white/10"
+                                className="p-2 rounded-lg text-mist/60 hover:bg-white/10"
                             />
                             <YouTubeIcon
                                 href={YOUTUBE_URL}
-                                className="p-2 rounded-lg text-mist/60 hover:text-mist hover:bg-white/10"
+                                className="p-2 rounded-lg text-mist/60 hover:bg-white/10"
+                            />
+                            <WhatsAppIcon
+                                href={WHATSAPP_URL}
+                                className="p-2 rounded-lg text-mist/60 hover:bg-white/10"
+                            />
+                            <EmailIcon
+                                href={`mailto:${EMAIL_ADDRESS}`}
+                                className="p-2 rounded-lg text-mist/60 hover:bg-white/10"
                             />
                         </div>
                     </div>

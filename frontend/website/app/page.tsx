@@ -2,10 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import RevealSection from "@/components/RevealSection";
-import { FacebookIcon, YouTubeIcon } from "@/components/SocialIcons";
+import {
+    EmailIcon,
+    FacebookIcon,
+    WhatsAppIcon,
+    YouTubeIcon,
+} from "@/components/SocialIcons";
+import WhatsAppFloatButton from "@/components/WhatsAppFloatButton";
 
 export const metadata: Metadata = {
-    title: "Dr. Hasan Nasir Cheema",
+    title: "Dr. Hasan Nasir Cheema Clinic",
     description:
         "Book an in-person consultation with Dr. Hasan Nasir Cheema online, or browse health and wellness products from Shop Dr Hasan Nasir.",
 };
@@ -37,6 +43,10 @@ export default function HomePage() {
 
     return (
         <>
+            <WhatsAppFloatButton
+                href={waLink}
+                targetId="whatsapp-hero-cta"
+            />
             {/* ── Hero + About ────────────────────────────────────────── */}
             <div className="px-7 bg-gradient-to-b from-mist/60 via-mist/20 to-paper pb-4">
                 <div className="mx-auto max-w-content">
@@ -54,8 +64,9 @@ export default function HomePage() {
                                 <p className="reveal reveal-d2 mt-5 max-w-[46ch] text-[1.1rem] text-ink-soft">
                                     Book your consultation online, choose an
                                     available appointment, and pay in advance to
-                                    secure your time. You can also explore health
-                                    and wellness products in our online shop.
+                                    secure your time. You can also explore
+                                    health and wellness products in our online
+                                    shop.
                                 </p>
                                 <div className="reveal reveal-d3 mt-8 flex flex-wrap gap-4">
                                     <Link
@@ -71,6 +82,7 @@ export default function HomePage() {
                                         Visit the Shop
                                     </Link>
                                     <a
+                                        id="whatsapp-hero-cta"
                                         href={waLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -124,8 +136,8 @@ export default function HomePage() {
                                 </span>
                                 <h2 className="mt-3 text-[clamp(1.4rem,2.6vw,1.8rem)] max-w-[18ch] font-semibold leading-snug">
                                     Healing through expertise,
-                                    <br className="hidden md:block" />{" "}
-                                    one patient at a time
+                                    <br className="hidden md:block" /> one
+                                    patient at a time
                                 </h2>
                             </div>
                             <div>
@@ -145,11 +157,12 @@ export default function HomePage() {
                                         experience, with a special interest in
                                         gut and brain health, anxiety, and
                                         depression management. His approach to
-                                        healthcare goes beyond treating symptoms,
-                                        focusing on identifying underlying factors
-                                        and helping patients develop sustainable
-                                        habits around nutrition, movement, sleep,
-                                        and lifestyle.
+                                        healthcare goes beyond treating
+                                        symptoms, focusing on identifying
+                                        underlying factors and helping patients
+                                        develop sustainable habits around
+                                        nutrition, movement, sleep, and
+                                        lifestyle.
                                     </p>
                                     <p>
                                         Dr. Cheema believes that lasting health
@@ -167,14 +180,15 @@ export default function HomePage() {
                                         A committed fitness enthusiast himself,
                                         Dr. Cheema emphasizes practical,
                                         evidence-informed guidance on healthy
-                                        eating, nutrition, exercise, and physical
-                                        activity as essential components of
-                                        disease prevention and long-term
-                                        wellbeing. Through his clinical practice
-                                        and health education, he aims to help
-                                        people understand their health better,
-                                        make informed decisions, and build
-                                        sustainable habits for a healthier life.
+                                        eating, nutrition, exercise, and
+                                        physical activity as essential
+                                        components of disease prevention and
+                                        long-term wellbeing. Through his
+                                        clinical practice and health education,
+                                        he aims to help people understand their
+                                        health better, make informed decisions,
+                                        and build sustainable habits for a
+                                        healthier life.
                                     </p>
                                     <p>
                                         Every appointment is booked online in
@@ -296,7 +310,7 @@ export default function HomePage() {
                     {/* Social links */}
                     <div className="mt-8 flex items-center gap-3">
                         <span className="font-mono text-[0.75rem] uppercase tracking-[0.08em] text-ink-soft mr-1">
-                            Follow
+                            Connect
                         </span>
                         <FacebookIcon
                             href={FACEBOOK_URL}
@@ -304,6 +318,14 @@ export default function HomePage() {
                         />
                         <YouTubeIcon
                             href={YOUTUBE_URL}
+                            className="p-2 rounded-lg hover:bg-mist"
+                        />
+                        <WhatsAppIcon
+                            href={waLink}
+                            className="p-2 rounded-lg hover:bg-mist"
+                        />
+                        <EmailIcon
+                            href="mailto:drhasannasir12@gmail.com"
                             className="p-2 rounded-lg hover:bg-mist"
                         />
                     </div>
