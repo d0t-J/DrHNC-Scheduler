@@ -19,7 +19,7 @@ export default function TermsOfServicePage() {
                         Terms &amp; Conditions
                     </h1>
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
-                        Last updated: 4 August 2026
+                        Last updated: 24 August 2026
                     </p>
                 </div>
             </section>
@@ -157,15 +157,18 @@ export default function TermsOfServicePage() {
                         Appointment service
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        The website booking function is an administrative tool
-                        for arranging an in-person consultation; it is not an
-                        emergency or remote-diagnosis service. In an emergency,
-                        contact emergency services or go to the nearest hospital.
+                        The website is used to arrange consultations. It is not
+                        an emergency service. In an emergency, contact emergency
+                        services or go to the nearest hospital.
                     </p>
                     <ul className="mt-3 space-y-2 pl-5 list-disc text-ink-soft">
                         <li>
-                            Consultations are normally offered 7 days a week from
-                            12:00 PM to 2:30 PM, subject to availability.
+                            Online consultations are offered daily from 12:00 PM
+                            to 5:00 PM.
+                        </li>
+                        <li>
+                            Clinic consultations are offered daily from 6:00 PM
+                            to 9:00 PM.
                         </li>
                         <li>Each appointment slot is 10 minutes.</li>
                         <li>

@@ -19,7 +19,7 @@ export default function ShippingDeliveryPolicyPage() {
                         Shipping &amp; Delivery Policy
                     </h1>
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
-                        Last updated: 4 August 2026
+                        Last updated: 24 August 2026
                     </p>
                 </div>
             </section>
@@ -136,7 +136,7 @@ export default function ShippingDeliveryPolicyPage() {
                         parcel was refused without a valid product issue, we may
                         charge the actual re-delivery cost or deduct unrecoverable
                         courier charges from an otherwise available refund. We
-                        will contact you before re-dispatch where possible.
+                        will contact you before re-dispatch to confirm the cost.
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
@@ -150,8 +150,8 @@ export default function ShippingDeliveryPolicyPage() {
                         >
                             drhasannasir12@gmail.com
                         </a>{" "}
-                        or call +92 331 6507678. Include your order number whenever
-                        possible.
+                        or call +92 331 6507678. Include your order number if
+                        one was provided in your order confirmation.
                     </p>
 
                     <div className="mt-10 pt-8 border-t border-line-soft">

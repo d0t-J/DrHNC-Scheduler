@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
                         Privacy Policy
                     </h1>
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
-                        Last updated: 4 August 2026
+                        Last updated: 24 August 2026
                     </p>
                 </div>
             </section>
@@ -118,9 +118,8 @@ export default function PrivacyPolicyPage() {
                             and dispute-resolution obligations
                         </li>
                         <li>
-                            To send marketing messages only where you have
-                            requested them or where otherwise permitted; you may
-                            opt out at any time
+                            To send marketing messages only when you have asked
+                            us to send them; you may opt out at any time
                         </li>
                     </ul>
 

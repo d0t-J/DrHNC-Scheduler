@@ -19,7 +19,7 @@ export default function CookiePolicyPage() {
                         Cookie Policy
                     </h1>
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
-                        Last updated: 4 August 2026
+                        Last updated: 24 August 2026
                     </p>
                 </div>
             </section>
@@ -79,7 +79,7 @@ export default function CookiePolicyPage() {
                         These cookies help us understand aggregate website use,
                         page performance, errors, and navigation so we can
                         improve the experience. Where a consent control is
-                        presented, non-essential analytics should be used in
+                        presented, we use non-essential analytics only in
                         accordance with your selection.
                     </p>
 

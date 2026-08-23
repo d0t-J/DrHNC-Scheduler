@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const navLinks = [
-    { href: "/booking", label: "Booking" },
-    { href: "/products", label: "Products" },
-    { href: "/#contact", label: "Contact" },
-    { href: "/legal", label: "Legal" },
+    { href: "/booking", label: "Booking", emphasized: true },
+    { href: "/products", label: "Products", emphasized: true },
+    { href: "/#contact", label: "Contact", emphasized: true },
+    { href: "/legal", label: "Legal", emphasized: true },
 ];
 
 export default function Navbar() {
@@ -52,7 +52,11 @@ export default function Navbar() {
                         <Link
                             key={l.href}
                             href={l.href}
-                            className="text-[0.92rem] font-medium text-ink-soft no-underline hover:text-sage-deep hover:no-underline transition-colors"
+                            className={`inline-flex items-center text-[0.92rem] no-underline hover:text-sage-deep hover:no-underline transition-colors ${
+                                l.emphasized
+                                    ? "font-semibold text-ink"
+                                    : "font-medium text-ink-soft"
+                            }`}
                         >
                             {l.label}
                         </Link>
@@ -82,7 +86,11 @@ export default function Navbar() {
                         <Link
                             key={l.href}
                             href={l.href}
-                            className="text-[0.92rem] font-medium text-ink-soft no-underline hover:text-sage-deep"
+                            className={`inline-flex w-fit items-center text-[0.92rem] no-underline hover:text-sage-deep transition-colors ${
+                                l.emphasized
+                                    ? "font-semibold text-ink"
+                                    : "font-medium text-ink-soft"
+                            }`}
                             onClick={() => setOpen(false)}
                         >
                             {l.label}

@@ -19,7 +19,7 @@ export default function HealthProductDisclaimerPage() {
                         Health Product Disclaimer
                     </h1>
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
-                        Last updated: 4 August 2026
+                        Last updated: 24 August 2026
                     </p>
                 </div>
             </section>

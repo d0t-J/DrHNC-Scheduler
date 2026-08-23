@@ -19,7 +19,7 @@ export default function RefundCancellationPolicyPage() {
                         Refund, Return &amp; Cancellation Policy
                     </h1>
                     <p className="mt-2.5 text-[0.92rem] text-ink-soft">
-                        Last updated: 4 August 2026
+                        Last updated: 24 August 2026
                     </p>
                 </div>
             </section>
@@ -50,8 +50,7 @@ export default function RefundCancellationPolicyPage() {
                         Eligible product problems
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        A replacement or refund may be available when a product
-                        is:
+                        A product is eligible for review when it is:
                     </p>
                     <ul className="mt-3 space-y-2 pl-5 list-disc text-ink-soft">
                         <li>Different from the product or quantity ordered</li>
@@ -112,13 +111,14 @@ export default function RefundCancellationPolicyPage() {
                     </h2>
                     <p className="mt-3 text-ink-soft">
                         We may ask for additional information or arrange a return
-                        before approving a claim. If the claim is accepted, we
-                        will offer an appropriate replacement or refund. If a
-                        replacement is unavailable, the affected product price
-                        and any basic delivery charge paid specifically for that
-                        product will be refunded. Approved refunds are sent to
-                        the original payment method where possible, normally
-                        within 7 to 14 business days; your bank or payment
+                        before deciding a claim. We will tell you in writing
+                        whether the claim is accepted. For an accepted claim, we
+                        will either replace the affected product or refund its
+                        price. If a replacement is unavailable, we will refund
+                        the affected product price and any basic delivery charge
+                        paid specifically for that product. We issue approved
+                        refunds to the original payment method within 14
+                        business days after approval. Your bank or payment
                         provider may take additional time to post the amount.
                     </p>
 
@@ -130,21 +130,23 @@ export default function RefundCancellationPolicyPage() {
                         supplied were incorrect, the recipient was unavailable,
                         or a correctly supplied order was refused, additional
                         delivery or return charges may be deducted from a refund
-                        or charged before re-dispatch. This does not apply where
-                        the failure was our error or the courier&apos;s confirmed
-                        mishandling.
+                        or charged before re-dispatch. We will tell you the
+                        amount before making that charge or deduction. This does
+                        not apply where the failure was our error or the
+                        courier&apos;s confirmed mishandling.
                     </p>
 
                     <h2 className="mt-11 text-[1.3rem] font-display font-semibold text-ink">
                         Order cancellation
                     </h2>
                     <p className="mt-3 text-ink-soft">
-                        Contact us immediately if you need to cancel a physical
-                        product order. We will try to stop fulfilment, but an
-                        order cannot be cancelled after dispatch. If we cancel a
-                        paid product order because an item is unavailable, an
-                        address cannot be served, or a listing error occurred,
-                        the cancelled amount will be refunded.
+                        A physical product order can be cancelled only before it
+                        is dispatched. Contact us immediately if you need to
+                        cancel. Once an order has been dispatched, it cannot be
+                        cancelled. If we cancel a paid product order because an
+                        item is unavailable, an address cannot be served, or a
+                        listing error occurred, the cancelled amount will be
+                        refunded.
                     </p>
 
                     <div className="rounded-xl border border-ink/20 bg-ink text-paper px-6 py-5 mt-14 mb-10">
