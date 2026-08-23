@@ -58,7 +58,7 @@ export default function Footer() {
 
                     {/* Right: policy links */}
                     <nav
-                        className="flex max-w-[42rem] flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-end sm:gap-x-5 sm:gap-y-3 sm:items-start"
+                        className="flex max-w-[42rem] flex-col gap-3 sm:min-w-0 sm:flex-1 sm:flex-row sm:flex-wrap sm:justify-end sm:gap-x-5 sm:gap-y-3 sm:items-start"
                         aria-label="Policy links"
                     >
                         {policyLinks.map((l) => (
