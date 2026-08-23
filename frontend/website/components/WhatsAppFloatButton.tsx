@@ -34,7 +34,7 @@ export default function WhatsAppFloatButton({
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with Dr. Hasan Nasir Cheema on WhatsApp"
-            className={`fixed bottom-5 right-5 z-[60] inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-[0.95rem] font-semibold text-white no-underline shadow-lg transition-all duration-300 hover:-translate-y-px hover:bg-[#1ebe5d] hover:no-underline ${
+            className={`fixed bottom-6 right-6 z-[60] inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-[0.95rem] font-semibold text-white no-underline shadow-lg transition-all duration-300 hover:-translate-y-px hover:bg-[#1ebe5d] hover:no-underline md:bottom-8 md:right-8 ${
                 isVisible
                     ? "translate-y-0 opacity-100"
                     : "pointer-events-none translate-y-3 opacity-0"
